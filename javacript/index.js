@@ -3,9 +3,9 @@ function updateTime() {
   if (losAngelesElement) {
     let losAngelesDateElement = losAngelesElement.querySelector(".date");
     let losAngelesTimeElement = losAngelesElement.querySelector(".time");
-    let losAngelesTime = moment.tz("America/Los_Angeles");
+    let losAngelesTime = moment().tz("America/Los_Angeles");
 
-    losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM do YYYY");
+    losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM Do YYYY");
     losAngelesTimeElement.innerHTML = losAngelesTime.format(
       "h:mm:ss [<small>]P[</small>]"
     );
@@ -15,9 +15,9 @@ function updateTime() {
   if (sydneyElement) {
     let sydneyDateElement = sydneyElement.querySelector(".date");
     let sydneyTimeElement = sydneyElement.querySelector(".time");
-    let sydneyTime = moment.tz("Australia/Sydney");
+    let sydneyTime = moment().tz("Australia/Sydney");
 
-    sydneyDateElement.innerHTML = sydneyTime.format("MMMM do YYYY");
+    sydneyDateElement.innerHTML = sydneyTime.format("MMMM Do YYYY");
     sydneyTimeElement.innerHTML = sydneyTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
