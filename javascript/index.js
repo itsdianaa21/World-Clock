@@ -5,7 +5,7 @@ function updateTime() {
     let losAngelesTimeElement = losAngelesElement.querySelector(".time");
     let losAngelesTime = moment().tz("America/Los_Angeles");
 
-    losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM Do YYYY");
+    losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM	Do YYYY");
     losAngelesTimeElement.innerHTML = losAngelesTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
@@ -17,13 +17,13 @@ function updateTime() {
     let sydneyTimeElement = sydneyElement.querySelector(".time");
     let sydneyTime = moment().tz("Australia/Sydney");
 
-    sydneyDateElement.innerHTML = sydneyTime.format("MMMM Do YYYY");
+    sydneyDateElement.innerHTML = sydneyTime.format("MMMM	Do YYYY");
     sydneyTimeElement.innerHTML = sydneyTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
   }
-  ``;
 }
+
 function updateCity(event) {
   let cityTimeZone = event.target.value;
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
